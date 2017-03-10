@@ -1,0 +1,231 @@
+#ifndef __STRUCTDEFINE_H
+#define __STRUCTDEFINE_H
+
+struct T_Kv_spi
+{
+    char SPI_len;
+    char* SPI_data_buffer;
+}Kv_spiNum;
+
+struct T_Kv_in
+{
+	char VF_lenth;
+	char* From;
+	char VT_lenth;
+	char* To;
+}Kv_inNum;
+
+struct T_KEYSUB
+{
+	char Next_payload;
+	char Type_kv;
+	unsigned int Key_data_len;
+    char* Key_data_buffer; 
+	char Salt_len;
+	char* Salt_data_buffer;
+	//char* Kv_data_buffer;
+	union U_KV
+	{
+		T_Kv_spi Kv_spiNum;
+		T_Kv_in Kv_inNum;
+	}KVNum;
+}KEYSUBNum;
+
+struct T_KEMAC
+{
+	char Next_payload;
+	char Encr_alg;
+	char Encr_data_len;
+	//	char Encr_data;
+	T_KEYSUB KEYSUBNum;
+}KEMACNum;
+
+struct T_KEY
+{
+	char Next_payload;
+	char Type_kv;
+	unsigned int Key_data_len;
+    char* Key_data_buffer; 
+	char Salt_len;
+	char* Salt_data_buffer;
+	//char* Kv_data_buffer;
+	union U_KV
+	{
+		T_Kv_spi Kv_spiNum;
+		T_Kv_in Kv_inNum;
+	}KVNum;
+}KEYNum;
+
+struct T_Sign
+ {
+	unsigned int S_sign_len;
+	char* Sdata;
+}SignNum;
+
+struct T_Timestamp
+{
+	char Next_payload;
+	char Ts_type;
+	char* Ts_value;
+}TimestampNum;
+
+struct T_ID
+ {
+	char Next_payload;
+	char Itype;
+	unsigned int len;
+	char* data;
+}IDNum;
+
+struct T_Cert
+ {
+	char Next_payload;
+	char Itype;
+	unsigned int len;
+	char* data;
+}CertNum;
+
+struct T_Hash
+ {
+	char Next_payload;
+	char Func;
+	char* data;
+}HashNum;
+
+struct T_V
+ {
+   char Next_payload;
+   char Auth;
+   char* data;
+}VNum;
+
+struct T_Param
+ {
+	char Type;
+	char Len;
+	char* Value;
+}ParamNum;
+
+struct T_SP
+ {
+    char Next_payload;
+	char Policy_no;
+	char Prot_type;
+    unsigned int Param_len;
+//	char* Param_data;
+    T_Param ParamNum;
+}SPNum;
+
+struct T_Rand
+ {
+	char Next_payload;
+	char Rand_Len;
+	char* data;
+}RandNum;
+
+struct T_Err
+ {
+   char Next_payload;
+   char Err_no;
+   unsigned int Reserved;
+}ErrNum;
+
+struct T_Gen_ext
+ {
+	char Next_payload;
+	char Type;
+	unsigned int Len;
+	char* data;
+}Gen_ext;
+
+struct T_SRTP_ID 
+{
+	char Policy_no_i;
+	unsigned long SSRC_i;
+	unsigned long ROC_i;
+}SRTP_IDNum;
+
+struct T_HDR
+{ 
+	char Version;
+	char Data_type;
+	char Next_payload;
+	char V_Prf_func;
+	unsigned long Csb_id;
+	char Cs;
+	char Cs_type;
+	T_SRTP_ID p_srtp_id;
+}HDRNum;
+/*
+struct T_Payload
+{
+  char Nextpayload;
+  char* Payload_i;
+}*PayloadNum;
+*/
+struct T_Mikey
+ {
+	char Version;
+	char Data_type;
+	char Next_payload;
+//	char* Common_Header;
+	T_HDR HDRNum;
+	/*	char Next_payload;
+	char* Payload_i;  */
+    union U_Payload
+    {
+		T_KEMAC KEMACNum;
+		T_Sign SignNum;
+		T_Timestamp TimestampNum;
+        T_ID IDNum;
+		T_Cert CertNum;
+        T_Hash HashNum;
+        T_V VNum;
+        T_SP SPNum;
+		T_KEY KEYNum;
+        T_Rand RandNum;
+        T_Err ErrNum;
+        T_Gen_ext Gen_ext;    	
+    }PayloadNum;
+  	unsigned long Mac_Signature; 
+}MikeyNum;
+
+//MIKEY 消息
+///////////////////////////////////////////////////////////////////////////////////////
+struct HeadExt
+ {
+	unsigned int Profile;
+	unsigned int Len;
+	char* Ext;
+
+}HeadExtNum;
+
+struct T_SRTP
+{
+    char V_CC;
+	 char M_TP;
+	unsigned int SeqNum;
+    long int Timestamp;
+	long int SSRC;
+	long int CSRC;
+	HeadExt HeadExtNum;
+	char* Payload;
+	long int SRTP_MKI;
+	long int Auth_tag;
+}SRTPNum;
+
+// SRTP消息
+//////////////////////////////////////////////////////////////////////////////////////////
+
+struct RTP	 
+{ 
+    char *putout;	
+	char* payload;
+    int length;	 
+			
+}RTPNum;
+
+// RTP消息
+///////////////////////////////////////////////////////////////////////////////////////
+
+#endif

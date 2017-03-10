@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: AesCode - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\cao\AppData\Local\Temp\RSP3038.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/AesCode.pdb" /debug /machine:I386 /out:"Debug/AesCode.exe" /pdbtype:sept 
+".\Debug\Aes.obj"
+".\Debug\AesCode.obj"
+".\Debug\AesCodeDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\UDPTORTP.obj"
+".\Debug\AesCode.res"
+]
+Creating command line "link.exe @C:\Users\cao\AppData\Local\Temp\RSP3038.tmp"
+<h3>Output Window</h3>
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/AesCode.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\Aes.sbr" ".\Debug\AesCode.sbr" ".\Debug\AesCodeDlg.sbr" ".\Debug\UDPTORTP.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+AesCode.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

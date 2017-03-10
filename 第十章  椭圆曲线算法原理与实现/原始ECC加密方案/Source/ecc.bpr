@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="..\ecc.lib"/>
+    <OBJFILES value="..\obj\eccMisc.obj ..\obj\eccString.obj ..\obj\eccFile.obj 
+      ..\obj\eccError.obj ..\obj\eccBrowseForDirectory.obj 
+      ..\obj\eccCheckStringList.obj ..\obj\eccFileProperties.obj 
+      ..\obj\eccFileVersionInfo.obj ..\obj\eccFormMemory.obj 
+      ..\obj\eccPropertyHandler.obj ..\obj\eccShortcutFile.obj 
+      ..\obj\eccTimeLapse.obj ..\obj\eccRelease.obj"/>
+    <RESFILES value=""/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <PACKAGES value=""/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <LINKER value="TLib"/>
+    <USERDEFINES value="NO_WIN32_LEAN_AND_MEAN"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="ecc.bpf"/>
+    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <LISTFILE value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp 
+      -DNO_WIN32_LEAN_AND_MEAN -boa"/>
+    <CFLAG1 value="-O2 -H=..\obj\ecc.csm -Hc -Vx -Ve -X- -a8 -6 -b -d -k- -vi -c -tW -tWM"/>
+    <PFLAGS value="-N2..\obj -N0..\obj -$Y- -$R -$Q -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="/0"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="$(OBJFILES)"/>
+    <ALLLIB value=""/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="ecc.bpf" FORMNAME="" UNITNAME="ecc" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Ecc.h" FORMNAME="" UNITNAME="Ecc.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="eccMisc.cpp" FORMNAME="" UNITNAME="eccMisc" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="eccString.cpp" FORMNAME="" UNITNAME="eccString" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="eccFile.cpp" FORMNAME="" UNITNAME="eccFile" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="eccError.cpp" FORMNAME="" UNITNAME="eccError" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="eccBrowseForDirectory.cpp" FORMNAME="" UNITNAME="eccBrowseForDirectory" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="eccCheckStringList.cpp" FORMNAME="" UNITNAME="eccCheckStringList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="eccFileProperties.cpp" FORMNAME="" UNITNAME="eccFileProperties" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="eccFileVersionInfo.cpp" FORMNAME="" UNITNAME="eccFileVersionInfo" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="eccFormMemory.cpp" FORMNAME="" UNITNAME="eccFormMemory" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="eccPropertyHandler.cpp" FORMNAME="" UNITNAME="eccPropertyHandler" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="eccShortcutFile.cpp" FORMNAME="" UNITNAME="eccShortcutFile" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="eccTimeLapse.cpp" FORMNAME="" UNITNAME="eccTimeLapse" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="eccRelease.cpp" FORMNAME="" UNITNAME="eccRelease" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=2
+Item0=$(BCB)\include;$(BCB)\include\vcl
+Item1=D:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=2
+Item0=$(BCB)\lib\obj;$(BCB)\lib
+Item1=D:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=3
+Item0=NO_WIN32_LEAN_AND_MEAN
+Item1=NO_WIN32_LEAN_AND_MEAN;_UNICODE
+Item2=NO_WIN32_LEAN_AND_MEAN;_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=4
+Item0=..\obj
+Item1=P:\Ecc\obj
+Item2=P:\Ecc
+Item3=P:\Ecl\obj
+
+[HistoryLists\hlFinalOutputDir]
+Count=5
+Item0=..\
+Item1=P:\Ecc\
+Item2=P:\Ecc
+Item3=P:\Ecl\
+Item4=P:\Ecl
+
+[HistoryLists\hlTlibPageSize]
+Count=1
+Item0=0x0010
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>
